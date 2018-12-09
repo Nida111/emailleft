@@ -1,0 +1,139 @@
+﻿@model bookyourdoctor.doctor
+
+@{
+    ViewBag.Title = "Details";
+    doctor ABC = new doctor();
+    ABC.name = Model.name;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_of_birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_of_birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MBBS_Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MBBS_Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.confirm_password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.confirm_password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clinic_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clinic_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hospital_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospital_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hospital_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospital_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.clinic_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.clinic_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.specialization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.specialization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.practising_years)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.practising_years)
+        </dd>
+
+    </dl>
+
+    <p>@Html.ActionLink("View Shedule", "ViewShedule", "doctors", new { ide = Model.doctor_id }, null)</p> @*, new { ide = Model.doctor_id, idee=Model.clinic_name, ideee=Model.hospital_name, ad }, null)*@)
+</div>
+

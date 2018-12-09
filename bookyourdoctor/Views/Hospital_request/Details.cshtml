@@ -1,0 +1,58 @@
+﻿@model bookyourdoctor.Hospital_request
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Hospital_request</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_start_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_start_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hospital_end_time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hospital_end_time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.patient_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.patient_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hospital_day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hospital_day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.doctor_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.doctor_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

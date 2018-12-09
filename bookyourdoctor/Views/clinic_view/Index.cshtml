@@ -1,0 +1,50 @@
+﻿@model IEnumerable<bookyourdoctor.clinic_view>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2 style="padding-left:400px">CLINIC SHEDULE</h2>
+
+<body style="background-image:url(../images/ss.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:400px;">
+  
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.clinic_start_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clinic_end_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.patient_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clinic_day)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.clinic_start_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.clinic_end_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.patient_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Clinic_day)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</body>

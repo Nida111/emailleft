@@ -1,0 +1,56 @@
+﻿@model IEnumerable<bookyourdoctor.Clinic_request>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="padding-left:400px">CLINIC REQUESTS</h2>
+
+<body style="background-image:url(../images/ss.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:400px;">
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.clinic_start_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clinic_end_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.patient_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.clinic_day)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.clinic_start_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.clinic_end_time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.patient_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.clinic_day)
+                </td>
+
+                <td>
+                    @Html.ActionLink("ACCEPT", "Create1", "clinic_view", new { idee = item.id }, null)
+                    @Html.ActionLink("REJECT", "Create1", "clinic_view", new { idee = item.id }, null)
+                </td>
+            </tr>
+        }
+
+    </table>
+</body>
